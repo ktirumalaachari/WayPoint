@@ -14,7 +14,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { useApp } from "@/context/AppContext";
-import { api } from "@/services/api";
+import { api, warmupBackend } from "@/services/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -62,6 +62,10 @@ export default function Auth() {
   const [touched, setTouched] = React.useState({});
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState("");
+
+  React.useEffect(() => {
+    warmupBackend();
+  }, []);
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const pwValid = password.length >= 6;

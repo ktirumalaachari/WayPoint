@@ -13,34 +13,82 @@
 
 // ─── Config ───
 const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false'; // default → mock
-const BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
+const RAW_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').trim().replace(/\/+$/, '');
+const BASE_URL =
+  RAW_BASE_URL && !/^https?:\/\//i.test(RAW_BASE_URL)
+    ? `https://${RAW_BASE_URL}`
+    : RAW_BASE_URL;
 const TOKEN_KEY = 'waypoint-token';
+let _warmedUp = false;
+
+/** Fire a one-time health ping on remote deployments so cold hosts (e.g. Render) wake before form submit. */
+export function warmupBackend() {
+  if (_warmedUp || typeof fetch === 'undefined') return;
+  if (!BASE_URL || /^http:\/\/(localhost|127\.0\.0\.1)/i.test(BASE_URL)) return;
+  _warmedUp = true;
+  fetch(`${BASE_URL}/api/health`).catch(() => {
+    _warmedUp = false;
+  });
+}
+
+function buildNetworkErrorMessage() {
+  const isHttpsPage = typeof window !== 'undefined' && window.location.protocol === 'https:';
+  if (isHttpsPage && /^http:\/\/(localhost|127\.0\.0\.1)/i.test(BASE_URL)) {
+    return `VITE_API_BASE_URL is pointing to ${BASE_URL} on an HTTPS site. Update it in Vercel to your live HTTPS backend URL.`;
+  }
+  const target = BASE_URL || 'same origin';
+  return `Cannot reach the backend server (${target}). Start the backend locally or wait ~30s if the server is waking up, then try again.`;
+}
 
 // ─── Real HTTP helper ───
 // Prefixes the base URL, sends JSON, attaches the bearer token if we have one,
 // and normalizes errors into a thrown Error the UI can surface.
 async function http(path, { method = 'GET', body } = {}) {
+  const isHttpsPage = typeof window !== 'undefined' && window.location.protocol === 'https:';
+  if (isHttpsPage && !BASE_URL) {
+    throw new Error('Backend API URL is not configured (set VITE_API_BASE_URL in Vercel and redeploy).');
+  }
+
   const headers = { 'Content-Type': 'application/json' };
   const token =
     typeof localStorage !== 'undefined' ? localStorage.getItem(TOKEN_KEY) : null;
   if (token) headers.Authorization = `Bearer ${token}`;
 
-  let res;
-  try {
-    res = await fetch(`${BASE_URL}${path}`, {
+  const doFetch = () =>
+    fetch(`${BASE_URL}${path}`, {
       method,
       headers,
       body: body ? JSON.stringify(body) : undefined,
     });
-  } catch {
-    throw new Error('Network error — could not reach the server. Check your connection.');
+
+  let res;
+  try {
+    res = await doFetch();
+    // Retry once on transient cold-start gateway errors (e.g. Render waking up)
+    if ([502, 503, 504].includes(res.status)) {
+      await new Promise((r) => setTimeout(r, 1500));
+      res = await doFetch();
+    }
+  } catch (err) {
+    // Retry safe idempotent GETs once for transient cold-start connection resets
+    if (method === 'GET') {
+      try {
+        await new Promise((r) => setTimeout(r, 1500));
+        res = await doFetch();
+      } catch {
+        console.error('[WayPoint API] Request failed:', `${BASE_URL}${path}`, err);
+        throw new Error(buildNetworkErrorMessage());
+      }
+    } else {
+      console.error('[WayPoint API] Request failed:', `${BASE_URL}${path}`, err);
+      throw new Error(buildNetworkErrorMessage());
+    }
   }
 
   let data = null;
   try {
     data = await res.json();
   } catch {
-    
     /* non-JSON / empty response — leave data null */
   }
 
@@ -50,6 +98,10 @@ async function http(path, { method = 'GET', body } = {}) {
     const detailMsg = typeof detail === 'string' ? detail : detail?.error?.message;
     const msg = data?.error?.message || data?.message || detailMsg || `Request failed (${res.status})`;
     throw new Error(msg);
+  }
+
+  if (data === null) {
+    throw new Error(`Invalid server response from ${BASE_URL || 'same origin'}. Check VITE_API_BASE_URL.`);
   }
   return data;
 }

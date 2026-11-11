@@ -75,6 +75,8 @@ SMTP_PASSWORD=your_gmail_app_password       # Gmail App Password (NOT account pa
 ```env
 VITE_SUPABASE_URL=your_supabase_url         # Same as backend
 VITE_SUPABASE_ANON_KEY=your_anon_key        # Same as backend
+VITE_USE_MOCK=false                         # Must be false for real backend API
+VITE_API_BASE_URL=http://localhost:8000     # Set to your Render HTTPS URL in Vercel
 ```
 
 > **Note:** Copy `.env.example` to `.env` in each folder and fill in your keys. Never commit `.env` files to Git.

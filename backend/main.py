@@ -30,17 +30,32 @@ app = FastAPI(
 )
 
 # ─── CORS ───
+_configured_origins = [
+    origin.strip().rstrip("/")
+    for origin in FRONTEND_ORIGIN.split(",")
+    if origin.strip()
+]
+_allowed_origins = list(
+    dict.fromkeys(
+        [
+            *_configured_origins,
+            "http://localhost:5173",
+            "http://localhost:5174",
+            "http://localhost:5180",
+            "http://127.0.0.1:5173",
+            "http://127.0.0.1:5174",
+        ]
+    )
+)
+_cors_origin_regex = os.getenv(
+    "CORS_ORIGIN_REGEX",
+    r"^https://[a-zA-Z0-9-]+\.vercel\.app$",
+)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        FRONTEND_ORIGIN,
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://localhost:5180",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174",
-    ],
+    allow_origins=_allowed_origins,
+    allow_origin_regex=_cors_origin_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -61,7 +76,7 @@ app.include_router(chat_router)
 def on_startup():
     """Server start."""
     print("[OK] WayPoint API started - database initialized (skipped create_all)")
-    print(f"[OK] CORS allowed: {FRONTEND_ORIGIN}, localhost:5173")
+    print(f"[OK] CORS allowed: {_allowed_origins}, regex={_cors_origin_regex}")
 
 
 # ─── Health Check ───
