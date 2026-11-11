@@ -115,7 +115,7 @@ The script automatically:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/ShanuPrajapati12005/WayPoint.git
+https://github.com/ktirumalaachari/WayPoint.git
 cd WayPoint
 ```
 
