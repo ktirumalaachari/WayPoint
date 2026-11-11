@@ -11,7 +11,10 @@ JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET", os.getenv("JWT_SECRET", "waypoint-
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRE_HOURS = 168  # 7 days
 FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./waypoint.db")
+DATABASE_URL = (
+    os.getenv("DATABASE_URL", "").strip().strip('"').strip("'")
+    or "sqlite:///./waypoint.db"
+)
 
 
 SUPABASE_URL = os.getenv("VITE_SUPABASE_URL", "")

@@ -84,23 +84,41 @@ def _is_allowed_origin(origin: str) -> bool:
     return bool(_cors_origin_regex and re.match(_cors_origin_regex, normalized))
 
 
+def _redact_secrets(text: str) -> str:
+    """Strip credentials from any connection strings before logging/returning diagnostics."""
+    return re.sub(r"://[^/@\s]+@", "://***@", text or "")
+
+
 def _sanitized_500_message(exc: Exception) -> str:
     msg = str(exc).lower()
     if "no such table" in msg or "undefinedtable" in msg or "does not exist" in msg:
         return "Database tables are not initialized on the server."
+    if "tenant or user not found" in msg:
+        return (
+            "Supabase Pooler rejected username — check DATABASE_URL uses "
+            "postgres.<project_ref> format for the pooler host."
+        )
     if any(
         token in msg
         for token in (
+            "can't create a connection",
             "network is unreachable",
             "connection refused",
             "could not translate host",
+            "name or service not known",
             "getaddrinfo failed",
             "password authentication",
             "eauthtimeout",
             "timed out",
             "timeout",
+            "unexpected keyword argument",
+            "could not parse sqlalchemy url",
             "operationalerror",
             "interfaceerror",
+            "programmingerror",
+            "databaseerror",
+            "argumenterror",
+            "ssl",
         )
     ):
         return (
@@ -164,12 +182,16 @@ def api_health_db():
         backend_type = "sqlite" if DATABASE_URL.startswith("sqlite") else "postgresql"
         return {"status": "ok", "database": "connected", "backend": backend_type}
     except Exception as exc:
+        traceback.print_exc()
+        safe_detail = _redact_secrets(str(exc))[:240]
         return JSONResponse(
             status_code=500,
             content={
                 "status": "error",
                 "database": "unreachable",
+                "error_type": type(exc).__name__,
                 "message": _sanitized_500_message(exc),
+                "detail": safe_detail,
             },
         )
     finally:
