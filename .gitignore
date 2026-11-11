@@ -1,0 +1,61 @@
+# Environments
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+env_secrets_for_team.txt
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.db
+*.sqlite3
+waypoint.db
+waypoint_backup.db
+backend/scratch/
+
+# Node
+node_modules/
+dist/
+build/
+.npm/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Agent internals (not part of project)
+.agent_docs/
+.claude/
+.vscode/
+
+# Internal docs / planning (not for judges)
+docs/
+
+# Backend scratch, test & one-off scripts (not production code)
+backend/scratch_*.py
+backend/test_*.py
+backend/update_*.py
+backend/script.py
+backend/*.db.backup
+backend/*.db
+backend/response.json
+backend/test_qs.json
+
+# Misc
+response.json
+test_qs.json
+PROJECT_CONTEXT.md
+frontend_analysis.md
+project_audit_report.md
+task.md
+implementation_plan.md
+walkthrough.md
+pyrightconfig.json

@@ -1,0 +1,887 @@
+{
+  "ml": {
+    "id": "ml",
+    "label": "Machine Learning",
+    "status": "active",
+    "nodeMap": {
+      "f1": {
+        "title": "Python for Data Science",
+        "status": "not_started",
+        "match": 96,
+        "duration": "2 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f2": {
+        "title": "Statistics & Probability",
+        "status": "not_started",
+        "match": 91,
+        "duration": "2 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f3": {
+        "title": "SQL for Data Analysis",
+        "status": "not_started",
+        "match": 88,
+        "duration": "1.5 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d1": {
+        "title": "Pandas & NumPy Mastery",
+        "status": "not_started",
+        "match": 93,
+        "duration": "2 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d2": {
+        "title": "Data Visualization",
+        "status": "not_started",
+        "match": 85,
+        "duration": "1 wk",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m1": {
+        "title": "ML Algorithms & Theory",
+        "status": "not_started",
+        "match": 90,
+        "duration": "3 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m2": {
+        "title": "Model Evaluation & Tuning",
+        "status": "not_started",
+        "match": 82,
+        "duration": "1.5 wks",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m3": {
+        "title": "Capstone: ML Portfolio Project",
+        "status": "not_started",
+        "match": 97,
+        "duration": "2 wks",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      }
+    },
+    "skillData": [
+      {
+        "skill": "Python",
+        "current": 25,
+        "target": 90
+      },
+      {
+        "skill": "Statistics",
+        "current": 15,
+        "target": 85
+      },
+      {
+        "skill": "SQL",
+        "current": 10,
+        "target": 80
+      },
+      {
+        "skill": "Data Wrangling",
+        "current": 8,
+        "target": 85
+      },
+      {
+        "skill": "Machine Learning",
+        "current": 5,
+        "target": 90
+      },
+      {
+        "skill": "Data Visualization",
+        "current": 12,
+        "target": 75
+      }
+    ],
+    "reasoning": {
+      "f1": {
+        "reason": "Python is the foundation for every ML tool and library.",
+        "prereq": "No prerequisites — start here.",
+        "time": "Fits your schedule in about 2 weeks."
+      },
+      "f2": {
+        "reason": "Statistics is the backbone of ML — distributions, hypothesis testing, correlation.",
+        "prereq": "Works alongside Python basics.",
+        "time": "About 2 weeks at your pace."
+      },
+      "f3": {
+        "reason": "SQL lets you extract and analyze data from databases efficiently.",
+        "prereq": "Basic programming understanding.",
+        "time": "About 9 days."
+      },
+      "d1": {
+        "reason": "Pandas & NumPy are the most-used tools for data manipulation.",
+        "prereq": "Python fundamentals.",
+        "time": "Plan 2 weeks with practice."
+      },
+      "d2": {
+        "reason": "Visualizing data tells a story — key for presentations and analysis.",
+        "prereq": "Pandas & NumPy familiarity.",
+        "time": "1 week — lightweight."
+      },
+      "m1": {
+        "reason": "Core ML theory: supervised, unsupervised, regression, classification.",
+        "prereq": "Statistics + Python + data tools.",
+        "time": "3 weeks — heavier module."
+      },
+      "m2": {
+        "reason": "Knowing if your model is good is half the work.",
+        "prereq": "ML fundamentals.",
+        "time": "1.5 weeks — focused."
+      },
+      "m3": {
+        "reason": "Your capstone — ties everything into one portfolio piece.",
+        "prereq": "All previous modules.",
+        "time": "2 weeks — your showcase."
+      }
+    }
+  },
+  "java": {
+    "id": "java",
+    "label": "Java Backend",
+    "status": "active",
+    "nodeMap": {
+      "f1": {
+        "title": "Java Syntax & OOP",
+        "status": "not_started",
+        "match": 90,
+        "duration": "2 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f2": {
+        "title": "Collections & Generics",
+        "status": "not_started",
+        "match": 84,
+        "duration": "1.5 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f3": {
+        "title": "Exception Handling",
+        "status": "not_started",
+        "match": 80,
+        "duration": "1 wk",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d1": {
+        "title": "Spring Boot Basics",
+        "status": "not_started",
+        "match": 92,
+        "duration": "2 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d2": {
+        "title": "REST APIs with Spring",
+        "status": "not_started",
+        "match": 89,
+        "duration": "1.5 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m1": {
+        "title": "JPA & Hibernate",
+        "status": "not_started",
+        "match": 86,
+        "duration": "2 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m2": {
+        "title": "Testing with JUnit",
+        "status": "not_started",
+        "match": 78,
+        "duration": "1 wk",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m3": {
+        "title": "Capstone: Task Manager API",
+        "status": "not_started",
+        "match": 95,
+        "duration": "2.5 wks",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      }
+    },
+    "skillData": [
+      {
+        "skill": "Java Core",
+        "current": 15,
+        "target": 90
+      },
+      {
+        "skill": "OOP Design",
+        "current": 10,
+        "target": 85
+      },
+      {
+        "skill": "Spring Boot",
+        "current": 3,
+        "target": 80
+      },
+      {
+        "skill": "Databases/JPA",
+        "current": 5,
+        "target": 75
+      },
+      {
+        "skill": "Testing",
+        "current": 5,
+        "target": 70
+      },
+      {
+        "skill": "REST APIs",
+        "current": 8,
+        "target": 85
+      }
+    ],
+    "reasoning": {
+      "f1": {
+        "reason": "Every Java concept builds on solid OOP understanding.",
+        "prereq": "No prerequisites — start here.",
+        "time": "2 weeks at your pace."
+      },
+      "f2": {
+        "reason": "Collections are used in every real Java project.",
+        "prereq": "Java Syntax & OOP.",
+        "time": "About 1.5 weeks."
+      },
+      "f3": {
+        "reason": "Proper error handling separates hobby from production code.",
+        "prereq": "Collections & Generics.",
+        "time": "1 week."
+      },
+      "d1": {
+        "reason": "Spring Boot is the industry standard for Java backends.",
+        "prereq": "Java fundamentals.",
+        "time": "2 weeks."
+      },
+      "d2": {
+        "reason": "REST is how every modern backend communicates.",
+        "prereq": "Spring Boot Basics.",
+        "time": "1.5 weeks."
+      },
+      "m1": {
+        "reason": "JPA/Hibernate is how Java talks to databases.",
+        "prereq": "Spring Boot + SQL.",
+        "time": "2 weeks — heavier."
+      },
+      "m2": {
+        "reason": "Writing tests proves reliable code.",
+        "prereq": "Any build phase module.",
+        "time": "1 week."
+      },
+      "m3": {
+        "reason": "Your capstone — a real REST API for your portfolio.",
+        "prereq": "All previous modules.",
+        "time": "2.5 weeks."
+      }
+    }
+  },
+  "mern": {
+    "id": "mern",
+    "label": "MERN Stack",
+    "status": "active",
+    "nodeMap": {
+      "f1": {
+        "title": "HTML/CSS Deep Dive",
+        "status": "not_started",
+        "match": 94,
+        "duration": "1 wk",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f2": {
+        "title": "JavaScript ES6+",
+        "status": "not_started",
+        "match": 92,
+        "duration": "2 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f3": {
+        "title": "React Fundamentals",
+        "status": "not_started",
+        "match": 90,
+        "duration": "2 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d1": {
+        "title": "Node.js & Express",
+        "status": "not_started",
+        "match": 88,
+        "duration": "2 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d2": {
+        "title": "MongoDB & Mongoose",
+        "status": "not_started",
+        "match": 85,
+        "duration": "1.5 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m1": {
+        "title": "Auth & Security",
+        "status": "not_started",
+        "match": 83,
+        "duration": "1 wk",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m2": {
+        "title": "Deployment & DevOps",
+        "status": "not_started",
+        "match": 79,
+        "duration": "1 wk",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m3": {
+        "title": "Capstone: Full-Stack App",
+        "status": "not_started",
+        "match": 96,
+        "duration": "3 wks",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      }
+    },
+    "skillData": [
+      {
+        "skill": "HTML/CSS",
+        "current": 20,
+        "target": 85
+      },
+      {
+        "skill": "JavaScript",
+        "current": 12,
+        "target": 90
+      },
+      {
+        "skill": "React",
+        "current": 5,
+        "target": 85
+      },
+      {
+        "skill": "Node.js",
+        "current": 3,
+        "target": 80
+      },
+      {
+        "skill": "MongoDB",
+        "current": 2,
+        "target": 75
+      },
+      {
+        "skill": "DevOps",
+        "current": 2,
+        "target": 60
+      }
+    ],
+    "reasoning": {
+      "f1": {
+        "reason": "HTML/CSS is the canvas everything renders on.",
+        "prereq": "No prerequisites.",
+        "time": "1 week."
+      },
+      "f2": {
+        "reason": "Modern JS is the language of both React and Node.",
+        "prereq": "HTML/CSS.",
+        "time": "2 weeks."
+      },
+      "f3": {
+        "reason": "React is where you'll spend most of your career.",
+        "prereq": "JavaScript ES6+.",
+        "time": "2 weeks."
+      },
+      "d1": {
+        "reason": "Node.js gives you the backend half of full-stack.",
+        "prereq": "JavaScript ES6+.",
+        "time": "2 weeks."
+      },
+      "d2": {
+        "reason": "MongoDB pairs naturally with JavaScript objects.",
+        "prereq": "Node.js basics.",
+        "time": "1.5 weeks."
+      },
+      "m1": {
+        "reason": "No production app ships without auth.",
+        "prereq": "Express + MongoDB.",
+        "time": "1 week."
+      },
+      "m2": {
+        "reason": "Getting from localhost to production is employable skill.",
+        "prereq": "Full stack working.",
+        "time": "1 week."
+      },
+      "m3": {
+        "reason": "Your capstone — a real full-stack app with auth and CRUD.",
+        "prereq": "All previous modules.",
+        "time": "3 weeks."
+      }
+    }
+  },
+  "devops": {
+    "id": "devops",
+    "label": "DevOps Engineering",
+    "status": "active",
+    "nodeMap": {
+      "f1": {
+        "title": "Linux Fundamentals",
+        "status": "not_started",
+        "match": 88,
+        "duration": "2 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f2": {
+        "title": "Networking Basics",
+        "status": "not_started",
+        "match": 82,
+        "duration": "1.5 wks",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f3": {
+        "title": "Shell Scripting",
+        "status": "not_started",
+        "match": 85,
+        "duration": "1 wk",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d1": {
+        "title": "Docker & Containers",
+        "status": "not_started",
+        "match": 93,
+        "duration": "2 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d2": {
+        "title": "CI/CD Pipelines",
+        "status": "not_started",
+        "match": 90,
+        "duration": "1.5 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m1": {
+        "title": "Kubernetes Basics",
+        "status": "not_started",
+        "match": 87,
+        "duration": "3 wks",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m2": {
+        "title": "Monitoring & Logging",
+        "status": "not_started",
+        "match": 80,
+        "duration": "1 wk",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m3": {
+        "title": "Capstone: Deploy Pipeline",
+        "status": "not_started",
+        "match": 95,
+        "duration": "2 wks",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      }
+    },
+    "skillData": [
+      {
+        "skill": "Linux",
+        "current": 10,
+        "target": 85
+      },
+      {
+        "skill": "Networking",
+        "current": 8,
+        "target": 75
+      },
+      {
+        "skill": "Docker",
+        "current": 3,
+        "target": 90
+      },
+      {
+        "skill": "CI/CD",
+        "current": 2,
+        "target": 80
+      },
+      {
+        "skill": "Kubernetes",
+        "current": 0,
+        "target": 75
+      },
+      {
+        "skill": "Monitoring",
+        "current": 2,
+        "target": 70
+      }
+    ],
+    "reasoning": {
+      "f1": {
+        "reason": "Every server, container, and pipeline runs on Linux.",
+        "prereq": "None.",
+        "time": "2 weeks."
+      },
+      "f2": {
+        "reason": "TCP/IP, DNS, ports — can't debug deployments without this.",
+        "prereq": "Linux familiarity.",
+        "time": "1.5 weeks."
+      },
+      "f3": {
+        "reason": "Bash is the glue of DevOps workflows.",
+        "prereq": "Linux Fundamentals.",
+        "time": "1 week."
+      },
+      "d1": {
+        "reason": "Docker is how modern apps are packaged and deployed.",
+        "prereq": "Linux + scripting.",
+        "time": "2 weeks."
+      },
+      "d2": {
+        "reason": "CI/CD automates testing and deployment.",
+        "prereq": "Docker basics.",
+        "time": "1.5 weeks."
+      },
+      "m1": {
+        "reason": "Kubernetes orchestrates containers at scale.",
+        "prereq": "Docker proficiency.",
+        "time": "3 weeks — heavy."
+      },
+      "m2": {
+        "reason": "Monitoring ensures your systems stay healthy.",
+        "prereq": "Deployments running.",
+        "time": "1 week."
+      },
+      "m3": {
+        "reason": "Your capstone — a complete deployment pipeline.",
+        "prereq": "All previous modules.",
+        "time": "2 weeks."
+      }
+    }
+  },
+  "python": {
+    "id": "python",
+    "label": "Python Foundations",
+    "status": "active",
+    "nodeMap": {
+      "f1": {
+        "title": "Python Syntax",
+        "status": "not_started",
+        "match": 98,
+        "duration": "1 wk",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f2": {
+        "title": "Functions & Modules",
+        "status": "not_started",
+        "match": 97,
+        "duration": "1 wk",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "f3": {
+        "title": "File Handling",
+        "status": "not_started",
+        "match": 95,
+        "duration": "0.5 wk",
+        "stage": "learn",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d1": {
+        "title": "OOP in Python",
+        "status": "not_started",
+        "match": 96,
+        "duration": "1 wk",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "d2": {
+        "title": "Error Handling",
+        "status": "not_started",
+        "match": 94,
+        "duration": "0.5 wk",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m1": {
+        "title": "Working with APIs",
+        "status": "not_started",
+        "match": 93,
+        "duration": "1 wk",
+        "stage": "build",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m2": {
+        "title": "Testing Basics",
+        "status": "not_started",
+        "match": 91,
+        "duration": "0.5 wk",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      },
+      "m3": {
+        "title": "Capstone: CLI Tool",
+        "status": "not_started",
+        "match": 99,
+        "duration": "1 wk",
+        "stage": "prove",
+        "syllabus": [
+          "Fundamentals of this module",
+          "Key concepts and best practices",
+          "Hands-on application"
+        ]
+      }
+    },
+    "skillData": [
+      {
+        "skill": "Syntax",
+        "current": 15,
+        "target": 95
+      },
+      {
+        "skill": "Functions",
+        "current": 10,
+        "target": 90
+      },
+      {
+        "skill": "OOP",
+        "current": 5,
+        "target": 85
+      },
+      {
+        "skill": "File I/O",
+        "current": 8,
+        "target": 85
+      },
+      {
+        "skill": "Testing",
+        "current": 3,
+        "target": 80
+      },
+      {
+        "skill": "APIs",
+        "current": 5,
+        "target": 85
+      }
+    ],
+    "reasoning": {
+      "f1": {
+        "reason": "Master Python syntax — the foundation for everything.",
+        "prereq": "None.",
+        "time": "1 week."
+      },
+      "f2": {
+        "reason": "Functions and modules organize your code properly.",
+        "prereq": "Python Syntax.",
+        "time": "1 week."
+      },
+      "f3": {
+        "reason": "Reading/writing files is essential for real projects.",
+        "prereq": "Functions.",
+        "time": "Half a week."
+      },
+      "d1": {
+        "reason": "OOP thinking scales your code for larger projects.",
+        "prereq": "Functions & Modules.",
+        "time": "1 week."
+      },
+      "d2": {
+        "reason": "Handling errors gracefully makes code production-ready.",
+        "prereq": "OOP.",
+        "time": "Half a week."
+      },
+      "m1": {
+        "reason": "APIs connect your code to the outside world.",
+        "prereq": "Error handling.",
+        "time": "1 week."
+      },
+      "m2": {
+        "reason": "Testing proves your code works correctly.",
+        "prereq": "APIs.",
+        "time": "Half a week."
+      },
+      "m3": {
+        "reason": "Build a CLI tool that ties everything together.",
+        "prereq": "All previous.",
+        "time": "1 week."
+      }
+    }
+  }
+}
