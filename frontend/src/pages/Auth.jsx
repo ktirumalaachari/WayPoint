@@ -270,7 +270,7 @@ export default function Auth() {
                   <Label htmlFor="name">Full name</Label>
                   <Input
                     id="name"
-                    placeholder="Ada Lovelace"
+                    placeholder="Full name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     onBlur={() => markTouched("name")}
