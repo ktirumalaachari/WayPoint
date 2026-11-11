@@ -4,7 +4,7 @@ sqlalchemy==2.0.41
 python-jose[cryptography]==3.4.0
 passlib[bcrypt]==1.7.4
 groq==0.25.0
-pydantic==2.11.3
+pydantic==2.14.3
 python-dotenv==1.1.0
 
 pg8000==1.31.2
